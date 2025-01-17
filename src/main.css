@@ -1,0 +1,27 @@
+@import 'aos/dist/aos.css';
+@import 'swiper/swiper-bundle.css';
+
+/* Additional styles */
+@import 'additional-styles/utility-patterns.css';
+@import 'additional-styles/toggle-switch.css';
+@import 'additional-styles/theme.css';
+
+/* Search Highlight */
+.search-highlight-block b{
+    @apply text-secondary;
+}
+/* Custom Article Prose*/
+.ProseMirror {
+    [data-block-column] {
+        @apply rounded p-2 bg-slate-100 hover:bg-slate-200 dark:bg-slate-600;
+    }
+
+    [data-block-column-width="flex-1"] {
+        @apply flex-1;
+    }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@config '../tailwind.config.js'

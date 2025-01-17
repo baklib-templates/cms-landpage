@@ -1,0 +1,69 @@
+{
+  "settings_schema": {
+    "generic": {
+      "name": "Basic Setting",
+      "settings": {
+        "logo_url": {
+          "label": "Logo",
+          "info": "recommended ratio 3:1"
+        },
+        "slogan": {
+          "label": "Slogan"
+        },
+        "copyright_info": {
+          "label": "Copyright info",
+          "placeholder": "Tanmer Inc."
+        },
+        "is_allow_feedback":{
+          "label": "is allow feedback"
+        },
+        "is_allow_header":{
+          "label": "is allow header"
+        },
+        "is_allow_footer":{
+          "label": "is allow footer"
+        }
+      }
+    },
+    "nav": {
+      "nav_title": "Navigation",
+      "head_title": "Head Meta Setting",
+      "settings": {
+        "header_menu_html": {
+          "label": "Header Nav Menu",
+          "info": "Support HTML tags and TailwindCss style code"
+        },
+        "footer_menu_html": {
+          "label": "Footer Nav Menu",
+          "info": "Support HTML tags and TailwindCss style code"
+        },
+        "head_html": {
+          "label": "Head HTML Code",
+          "info": "This part of the content will be embedded in the <head> tag of the site. Please use standard HTML format.",
+          "placeholder": "Refer to external css/js files, meta tags, etc., such as <meta name='baidu_verification' content='CdOTMO2h2' />"
+        }
+      }
+    },
+    "page": {
+      "name": "Page",
+      "settings": {
+        "title":{
+          "label": "Page Title",
+          "info": "Title show in content"
+        },
+        "description":{
+          "label": "Description"
+        },
+        "tags":{
+          "label": "Tags"
+        },
+        "thumb_image_url":{
+          "label": "Thumb image URL"
+        },
+        "content":{
+          "label": "Page Content"
+        }
+      }
+    }
+  }
+}

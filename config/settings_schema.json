@@ -1,0 +1,121 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "landpage",
+    "theme_label": "t:theme_label",
+    "theme_description": "t:theme_description",
+    "theme_version": "1.0.0",
+    "theme_scope": "cms",
+    "theme_author": "Baklib",
+    "theme_documentation_url": "https://help.baklib.cn/themes/landpage",
+    "theme_support_url": "https://help.baklib.cn/themes/landpage/settings",
+    "theme_thumb_url": "images/theme/thumb.png",
+    "theme_preview_images": [
+      "images/theme/index.png",
+      "images/theme/page.png",
+      "images/theme/consultancy.webp",
+      "images/theme/app.webp",
+      "images/theme/services.webp",
+      "images/theme/saas.webp",
+      "images/theme/tech.webp"
+    ],
+    "theme_languages": [
+      {
+        "name": "中文简体",
+        "value": "zh-CN"
+      },
+      {
+        "name": "English",
+        "value": "en-US"
+      }
+    ],
+    "recommendations": {
+      "color_schemas": {
+        "fashion": {
+          "name": "时尚",
+          "colors": {
+            "--theme-color-primary": "#3D50E0",
+            "--theme-color-secondary": "#E91E63",
+            "--theme-color-accent": "#AAAAAA",
+            "--theme-color-info": "#2196F3",
+            "--theme-color-success": "#4CAF50",
+            "--theme-color-warning": "#FFC107"
+          }
+        },
+        "old_school": {
+          "name": "复古",
+          "colors": {
+            "--theme-color-primary": "#9C27B0",
+            "--theme-color-secondary": "#673AB7",
+            "--theme-color-accent": "#AAAAAA",
+            "--theme-color-info": "#418CC8",
+            "--theme-color-success": "#29B52F",
+            "--theme-color-warning": "#FFC107"
+          }
+        }
+      },
+      "initial_pages": {
+        "default": {
+          "name": "landpage Website",
+          "default": true,
+          "pages": [
+            {
+              "name": "Where the world builds software",
+              "slug": "page1",
+              "template": "page"
+            },
+            {
+              "name": "Ready for the future",
+              "slug": "page2",
+              "template": "page"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "t:settings_schema.generic.name",
+    "settings": [
+      {
+        "id": "logo_url",
+        "type": "image_picker",
+        "ratio": "3:1",
+        "width": 150,
+        "label": "t:settings_schema.generic.settings.logo_url.label",
+        "info": "t:settings_schema.generic.settings.logo_url.info"
+      },
+      {
+        "id": "slogan",
+        "type": "text",
+        "label": "t:settings_schema.generic.settings.slogan.label",
+        "default": "Shaping a world with reimagination."
+      },
+      {
+        "id": "copyright_info",
+        "type": "text",
+        "label": "t:settings_schema.generic.settings.copyright_info.label",
+        "placeholder": "t:settings_schema.generic.settings.copyright_info.placeholder"
+      },
+      {
+        "id": "is_allow_feedback",
+        "type": "checkbox",
+        "label": "t:settings_schema.generic.settings.is_allow_feedback.label",
+        "default": true
+      }
+    ]
+  },
+  {
+    "name": "t:settings_schema.nav.head_title",
+    "settings": [
+      {
+        "id": "head_html",
+        "type": "html",
+        "label": "t:settings_schema.nav.settings.head_html.label",
+        "info": "t:settings_schema.nav.settings.head_html.info",
+        "rows": 10,
+        "placeholder": "t:settings_schema.nav.settings.head_html.placeholder"
+      }
+    ]
+  }
+]

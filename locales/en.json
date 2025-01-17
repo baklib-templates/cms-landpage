@@ -1,0 +1,42 @@
+{
+  "theme_label": "Landpage CMS",
+  "theme_description": "A landing page perfect for apps,tech,course,saas,consultancy,meeting,minimal page and services.",
+  "generic": {
+    "search": "👋 What Can We Help?",
+    "search_from": "All search results from: ",
+    "all": "All",
+    "popular": "Popular",
+    "home": "Home",
+    "back": "Back",
+    "submit": "Submit",
+    "empty": "Content is Empty",
+    "published_at": "Published at",
+    "visits": "visits",
+    "404": "404 not found",
+    "403": "403 No access permission",
+    "copyright": "All rights reserved",
+    "current_version": "Current Version"
+  },
+  "placeholders": {
+    "search": "Searching...",
+    "input_feedback": "Send feedback",
+    "input_password": "Please input your password"
+  },
+  "buttons": {
+    "login": "Login",
+    "signout": "Sign Out",
+    "sso_login": "SSO Login",
+    "baklib_login": "Baklib Account Login"
+  },
+  "prompts": {
+    "page_restricted": "This page can only be accessed with authentication"
+  },
+  "settings_schema": {
+    "section_brand": "Brand Info",
+    "logo_url_label": "Logo",
+    "logo_url_info": "Recommend 150x60px size PNG/SVG",
+    "slogan_label": "Site Slogan",
+    "copyright_info_label": "Copyright info",
+    "copyright_info_placeholder": "Tanmer Inc.All right Served."
+  }
+}

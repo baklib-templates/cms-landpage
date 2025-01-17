@@ -1,0 +1,37 @@
+<div class="overflow-visible h-auto pb-[50px] sm:pb-[70px] min-h-screen bg-slate-100">
+  <div class="max-w-5xl mx-auto relative pt-[180px] flex space-x-2">
+    <div class="space-y-2 lg:space-y-4 -mt-[60px] w-0 flex-grow">
+      <div class="flex pb-2 pl-2">
+        <a class="flex text-sm font-semibold leading-6 group text-slate-700 bg-slate-200 px-3 py-0.5 rounded-full hover:bg-slate-700 hover:text-white " href="{{ page.parent.path | default: site.index_path}}">
+          <svg viewBox="0 -9 3 24" class="w-auto h-6 mr-3 overflow-visible text-slate-400 group-hover:text-slate-600 dark:group-hover:text-slate-300">
+            <path d="M3 0L0 3L3 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>{{ "generic.back" | t }}
+        </a>
+      </div>
+      <!-- tag name -->
+      <div class="rounded shadow-md">
+        <div class="h-5 rounded-t" style="background-color: {{ tag.color }};"></div>
+        <div class="px-3 py-6 text-xl font-black rounded-b bg-primary-100 dark:bg-slate-300">
+          <span class="w-2 h-2 rounded-full shrink-0" style="background-color: {{ tag.color }}"></span>
+          <span class="flex-grow w-0 break-words" style="color: {{ tag.color }}"> # {{ tag.name }}</span>
+        </div>
+      </div>
+      <!-- filters by tag name -->
+      <ul role="list" class="space-y-3 lg:space-y-5">
+        {% paginate_tag tag.pages, as: 'pages' %}
+          {% for page in pages %}
+            {% render 'card', page: page %}
+          {% else %}
+            <div class="px-2 py-1 border border-slate-200 bg-white">{{ 'generic.empty' | t }}</div>
+          {% endfor %}
+          {% render 'paginate', paginate: paginate %}
+        {% endpaginate_tag %}
+      </ul>
+    </div>
+
+    <!-- Sidebar Section -->
+    <aside class="hidden w-64 pl-4 sm:block shrink-0">
+      {% render 'sidebar', site: site %}
+    </aside>
+  </div>
+</div>

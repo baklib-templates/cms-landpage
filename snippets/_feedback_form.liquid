@@ -1,0 +1,42 @@
+{% comment %} feedback {% endcomment %}
+{% if site.settings.is_allow_feedback %}
+  <div id="feedback_form">
+    {% form_tag 'feedback', page: page %}
+    <div class="bg-primary/5 mt-12 relative min-h-[2px]{% if site.plugins.feedback.message_enabled %}' pb-2 pt-4 px-2 '{% endif %}">
+      {% comment %} emoji {% endcomment %}
+      <div class="absolute left-0 flex items-center justify-center w-full space-x-6 -top-6" x-data="{ selected: '{{ page.last_feedback_emoji }}' }" >
+        {% if site.plugins.feedback.message_enabled %}
+          <div class="flex flex-wrap items-center justify-center space-x-3">
+            {% for useful_type in site.plugins.feedback.useful_types %}
+              <label
+                class="flex items-center p-1 transition-all duration-300 ease-in-out scale-100 border rounded-full bg-primary-100 opacity-80 grayscale"
+                :class="{ 'scale-150 grayscale-0': selected === '{{ useful_type.emoji }}' }"
+                @click="selected = '{{ useful_type.emoji }}'">
+                <input type="radio" name="feedback[useful_type]" value="{{ useful_type.emoji }}" class="hidden">
+                <span title="{{ useful_type.label }}" class="inline-flex items-center justify-center w-8 h-8">{{ useful_type.emoji }}</span>
+                {% comment %} <span class="text-xs">{{ useful_type.label }}</span> {% endcomment %}
+              </label>
+            {% endfor %}
+          </div>
+        {% else %}
+          <div class="flex items-center space-x-8">
+            {% for useful_type in site.plugins.feedback.useful_types %}
+              <button name="feedback[useful_type]" value="{{ useful_type.emoji }}" title="{{ useful_type.label }}" class="inline-flex items-center justify-center w-8 h-8 transition-all duration-300 ease-in-out scale-100 border rounded-full shadow-md grayscale bg-primary-100 opacity-80" :class="{ 'scale-150 grayscale-0': selected === '{{ useful_type.emoji }}' }" @click="selected = '{{ useful_type.emoji }}'">
+                {{ useful_type.emoji }}
+                {% comment %} <span class="text-xs">{{ useful_type.label }}</span> {% endcomment %}
+              </button>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+      {%# form %}
+      {% if site.plugins.feedback.message_enabled %}
+        <div class="flex items-center text-sm">
+          <input class="w-full resize-none px-2.5 py-1.5 placeholder:text-slate-400  outline-none border max-h-20" name="feedback[message]" placeholder="{{ "placeholders.input_feedback" | t }}"></input>
+          <input type="submit" class="inline-flex items-center justify-center px-5 py-1.5 text-center text-primary  font-bold cursor-pointer focus:outline-none bg-primary-focus border " value="{{ "generic.submit" | t }}" />
+        </div>
+      {% endif %}
+    </div>
+    {% endform_tag %}
+  </div>
+{% endif %}

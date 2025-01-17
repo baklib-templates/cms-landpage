@@ -1,0 +1,36 @@
+{
+  "theme_label": "CMS Landpage",
+  "theme_description": "时尚的模板页面非常适合展示现代应用程序、技术、课程、saas、咨询、会议、和服务页面。",
+  "generic": {
+    "search": "👋 搜索",
+    "search_from": "搜索结果：",
+    "all": "全部",
+    "popular": "热门",
+    "home": "首页",
+    "back": "返回",
+    "submit": "提交",
+    "empty": "内容为空",
+    "published_at": "发布于",
+    "visits": "次浏览",
+    "articles": "篇文章",
+    "read_more": "阅读更多",
+    "404": "404 页面找不到",
+    "403": "403 无访问权限",
+    "copyright": "版权所有",
+    "current_version": "当前版本"
+  },
+  "placeholders": {
+    "search": "站内搜索",
+    "input_feedback": "请与我们留言",
+    "input_password": "输入密码"
+  },
+  "buttons": {
+    "login": "登录",
+    "signout": "退出",
+    "sso_login": "SSO 登录",
+    "baklib_login": "Baklib 账号登录"
+  },
+  "prompts": {
+    "page_restricted": "本页面需要认证才可以被访问"
+  }
+}

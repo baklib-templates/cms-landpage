@@ -1,0 +1,52 @@
+Arguments:
+  /Users/song/.asdf/installs/nodejs/18.12.1/bin/node /Users/song/.asdf/installs/nodejs/18.12.1/bin/yarn
+
+PATH:
+  /Users/song/.asdf/plugins/nodejs/shims:/Users/song/.asdf/installs/nodejs/18.12.1/bin:/Users/song/.asdf/shims:/Users/song/.asdf/bin:/usr/local/opt/icu4c/sbin:/usr/local/opt/icu4c/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/Apple/usr/bin:/opt/ImageMagick/bin:/Applications/iTerm.app/Contents/Resources/utilities
+
+Yarn version:
+  1.22.19
+
+Node version:
+  18.12.1
+
+Platform:
+  darwin x64
+
+Trace:
+  Error: certificate has expired
+      at TLSSocket.onConnectSecure (node:_tls_wrap:1538:34)
+      at TLSSocket.emit (node:events:513:28)
+      at TLSSocket._finishInit (node:_tls_wrap:952:8)
+      at ssl.onhandshakedone (node:_tls_wrap:733:12)
+
+npm manifest:
+  {
+    "name": "gray",
+    "version": "1.1.1",
+    "license": "MIT",
+    "scripts": {
+      "build": "npm-run-all --parallel build:css build:js",
+      "build:css": "npx tailwindcss -i ./src/main.css -o ./assets/css/main.css",
+      "build:js": "npx esbuild ./src/main.js --bundle --minify --outfile=./assets/javascripts/main.js",
+      "dev": "npm-run-all --parallel 'build:css -- --watch' 'build:js -- --watch'"
+    },
+    "devDependencies": {
+      "esbuild": "^0.19.3",
+      "npm-run-all": "^4.1.5",
+      "tailwindcss": "^3.3.3"
+    },
+    "dependencies": {
+      "@alpinejs/collapse": "^3.13.0",
+      "@hotwired/stimulus": "^3.2.2",
+      "@hotwired/turbo": "^7.3.0",
+      "alpinejs": "^3.13.0",
+      "i18next": "^23.7.11"
+    }
+  }
+
+yarn manifest:
+  No manifest
+
+Lockfile:
+  No lockfile

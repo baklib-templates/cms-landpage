@@ -1,0 +1,110 @@
+<div class="overflow-visible h-auto pb-[50px] sm:pb-[70px] min-h-screen bg-slate-100">
+  <div class="max-w-5xl mx-auto relative pt-[180px] flex space-x-2">
+    <div class="space-y-2 lg:space-y-4 -mt-[60px] w-0 flex-grow">
+      <div class="flex">
+        <a class="flex text-sm font-semibold leading-6 group text-slate-700 bg-slate-200 px-3 py-0.5 rounded-full hover:bg-slate-700 hover:text-white " href="{{ page.parent.path }}">
+          <svg viewBox="0 -9 3 24" class="w-auto h-6 mr-3 overflow-visible text-slate-400 group-hover:text-slate-600 dark:group-hover:text-slate-300">
+            <path d="M3 0L0 3L3 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>{{ "generic.back" | t }}
+        </a>
+      </div>
+      {% # 面包屑导航 %}
+      <div class="mb-3">
+        {% render 'breadcrumb', breadcrumb: page.breadcrumb  %}
+      </div>
+
+      <article class="block p-4 overflow-hidden break-all bg-white border rounded shadow-md">
+        <div class="flex items-center space-x-2 text-xs font-light shrink-0">
+          {% for tag in page.settings.tags %}
+            <a href="{{ tag.path }}" style="background-color: {{ tag.color }}" class="px-2 py-1 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2">
+              {{ tag.name }}
+            </a>
+          {% endfor %}
+          
+          {% assign version_count = page.versions | size %}
+          {% if version_count > 0 %}
+            <ul class="flex space-x-1">
+              <li class="px-2 py-1 border rounded-lg hover:bg-teal-100"><a href="{{ page.path }}">{{'generic.current_version' | t }}</a></li>
+              {% for version_page in page.versions %}
+                <li class="px-2 py-1 border rounded-lg hover:bg-teal-100"><a href="{{ version_page.path | append: '?version=' |  append: version_page.name }}">{{ version_page.name }}</a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          <span class="flex items-center justify-center text-sm font-normal text-gray-400"> ·  {{ 'generic.published_at' | t }}: {{ page.published_at | date: "%Y-%m-%d" }}</span>
+          <span class="flex items-center justify-center text-sm font-normal text-gray-400"> ·  {{ page.visits_count }} {{ 'generic.visits' | t }}</span>
+
+        </div>
+        <h2 class="my-5 text-lg font-bold md:text-2xl leading-8 text-slate-800 dark:text-slate-800">
+          {{ page.settings.title }}
+        </h2>
+        {% if page.settings.thumb_image_url %}
+          <div class="overflow-hidden border rounded">
+            <img class="w-full transition-all duration-500 ease-in-out scale-100 hover:scale-110" src="{{ page.settings.thumb_image_url }}" />
+          </div>
+        {% endif %}
+        {% if page.settings.description %}
+          <p class="p-4 my-4 font-light border-l-2 text-slate-700 bg-slate-100 dark:bg-slate-500 dark:text-white">{{ page.settings.description }}</p>
+        {% endif  %}
+
+        <div class="overflow-auto max-w-full">
+          <div class="ProseMirror prose sm:prose-base lg:prose-lg focus:outline-none dark:prose-invert">
+            {{ page.settings.content }}
+          </div>
+        </div>
+
+        {% comment %} feedback form {% endcomment %}
+        {% render "feedback_form", page: page %}
+
+        {% comment %} page children {% endcomment %}
+        <div class="mt-4">
+          {% render "sub_page_list", page: page %}
+        </div>
+      </article>
+    </div>
+
+    <!-- Sidebar Section -->
+    <aside class="hidden w-64 pl-4 sm:block shrink-0">
+      {% render 'sidebar', site: site %}
+    </aside>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Page",
+    "thumb_url": "images/theme/page.png",
+    "sub_page_templates": ["page"],
+    "settings": [
+      {
+        "id": "title",
+        "type": "text",
+        "placeholder": "",
+        "label": "t:settings_schema.page.settings.title.label",
+        "info": "t:settings_schema.page.settings.title.info"
+      },
+      {
+        "id": "description",
+        "type": "textarea",
+        "label": "t:settings_schema.page.settings.description.label"
+      },
+      {
+        "id": "tags",
+        "type": "tag_picker",
+        "multiple": true,
+        "label": "t:settings_schema.page.settings.tags.label"
+      },
+      {
+        "id": "thumb_image_url",
+        "type": "image_picker",
+        "ratio": "4:1",
+        "width": 640,
+        "label": "t:settings_schema.page.settings.thumb_image_url.label"
+      },
+      {
+        "id": "content",
+        "type": "richtext",
+        "label": "t:settings_schema.page.settings.content.label"
+      }
+    ]
+  }
+{% endschema %}

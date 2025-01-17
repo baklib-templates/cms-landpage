@@ -1,0 +1,376 @@
+
+  <div id="content">
+
+    <div>
+
+
+      <article class="overflow-x-hidden bg-white">
+        <!-- top section of the page -->
+        <div class="bg-white text-gray-600 px-6 lg:px-8 py-4 lg:py-5">
+
+          <!-- header -->
+          <header class="max-w-screen-xl mx-auto flex justify-between items-center relative z-50"
+            x-data="{ mobileMenu: false}">
+            <a href="#" class="block flex-shrink-0">
+              <img class="h-9" src="{{ 'images/logo.svg' | asset_url }}" alt="logo placeholder">
+            </a>
+            <div class="flex justify-between space-x-4 md:space-x-10 flex-shrink-1 md:flex-grow-0">
+              <nav
+                class="hidden md:flex flex-col justify-center items-center p-8 md:p-0 space-y-4 md:space-y-0 md:flex-row md:space-x-4 lg:space-x-8 font-semibold absolute top-16 md:top-0 left-0 w-full md:w-auto  md:relative bg-gray-200 md:bg-transparent">
+                <a href="#" class="hover:opacity-70">Home</a>
+                <a href="#" class="hover:opacity-70">Services</a>
+                <a href="#" class="hover:opacity-70">Pricing</a>
+                <a href="#" class="hover:opacity-70">Blog</a>
+                <a href="#" class="hover:opacity-70">Contact</a>
+              </nav>
+
+              <button class="w-9 bg-gray-600 p-2 rounded-md text-gray-200 block md:hidden relative z-30"
+                @click="mobileMenu = !mobileMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div x-show="mobileMenu" x-transition:enter="transition ease-out duration-200"
+                x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
+                x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 scale-100"
+                x-transition:leave-end="opacity-0 scale-95"
+                class="absolute top-9 inset-x-0 py-2 ransition transform origin-top-right z-50 w-full md:hidden">
+                <nav class="rounded-lg shadow-lg bg-white p-3  transform -translate-x-4">
+                  <a href="#" class="hover:opacity-70 block px-6 py-3 font-semibold border-primary-50 border-b">Home</a>
+                  <a href="#"
+                    class="hover:opacity-70 block px-6 py-3 font-semibold border-primary-50 border-b">Services</a>
+                  <a href="#" class="hover:opacity-70 block px-6 py-3 font-semibold border-primary-50 border-b">Pricing</a>
+                  <a href="#" class="hover:opacity-70 block px-6 py-3 font-semibold border-primary-50 border-b">Blog</a>
+                  <a href="#" class="hover:opacity-70 block px-6 py-3 font-semibold border-primary-50 border-b">Contact</a>
+                </nav>
+              </div>
+            </div>
+          </header>
+          <!--/ header -->
+
+          <!-- hero -->
+          <div class="max-w-screen-xl mx-auto grid grid-cols-2 gap-8 lg:gap-24 md:items-center py-6 md:py-12 lg:py-20">
+            <div class="col-span-2 md:col-span-1 order-2 md:order-1 relative z-20">
+              <h2 class="text-2xl sm:text-3xl  lg:text-4xl xl:text-7xl text-gray-800 font-medium mb-6">Work better
+                with UIBak.</h2>
+              <p class="text-xl lg:text-2xl text-gray-600 mb-6">When, while the lovely valley teems with vapour around
+                me, and the meridian sun strikes the waiting be females upper surface of the impenetrable foliage of my
+                trees</p>
+              <a href="#"
+                class="inline-block bg-primary font-semibold text-lg rounded-lg py-4 lg:py-5 px-5 lg:px-8 xl:px-16 text-white md:mt-6">Book
+                a demo</a>
+              <div class="mt-12 xl:px-4 grid grid-cols-1 sm:grid-cols-3 space-y-5 sm:space-y-0 gap-4 xl:gap-12">
+                <img class="h-10 p-1 self-center justify-self-center opacity-75"
+                  src="{{ 'images/demo/meeting/airstream-logo.svg' | asset_url }}" alt="logo placeholder">
+                <img class="h-12 p-1 self-center justify-self-center opacity-75"
+                  src="{{ 'images/demo/meeting/jobboard-logo.svg' | asset_url }}" alt="logo placeholder">
+                <img class="h-12 p-1 self-center justify-self-center opacity-75"
+                  src="{{ 'images/demo/meeting/pathway-logo.svg' | asset_url }}" alt="logo placeholder">
+              </div>
+            </div>
+
+            <div
+              class="col-span-2 md:col-span-1 flex flex-row space-x-2 order-1 md:order-2 items-center justify-center relative">
+              <img src="{{ 'images/demo/meeting/baklib-moc8.jpeg' | asset_url }}" alt=""
+                class="rounded-lg relative z-20">
+              <svg class="absolute -right-48 bottom-1/3 max-w-xl text-gray-300" viewBox="0 0 200 200"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M32.59 132.878C7.932 82.32 16.565 57.248 67.122 32.59s75.63-16.025 100.288 34.532 16.025 75.63-34.532 100.288-75.63 16.025-100.288-34.532"
+                  fill="currentColor" />
+              </svg>
+              <svg class="absolute -left-48 top-2/4 max-w-md text-gray-200" viewBox="0 0 200 200"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M40.9 53.825C80.61 3 95.347 1.19 146.174 40.9S198.81 95.348 159.1 146.175 104.652 198.81 53.825 159.1 1.19 104.652 40.9 53.825"
+                  fill="currentColor" />
+              </svg>
+            </div>
+          </div>
+          <!--/ hero -->
+
+        </div>
+        <!--/ top section of the page -->
+
+        <!-- call out -->
+        <div class="text-gray-600 px-6 lg:px-8 pt-6 md:pt-12 md:pb-6 relative z-20">
+          <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-gray-700 font-medium text-center">Discover how
+              drops. will help your work better with your team and colleagues.</h2>
+          </div>
+        </div>
+        <!--/ call out -->
+
+        <!-- content block 1 -->
+        <div class="bg-white text-gray-600 px-6 lg:px-8 pt-12 lg:pb-20 lg:mt-16">
+          <div class="max-w-screen-xl mx-auto grid grid-cols-2 gap-8 lg:gap-24 items-start lg:items-center">
+            <div class="col-span-2 md:col-span-1 flex flex-row space-x-2">
+              <img src="{{ 'images/demo/meeting/surface-fH9BA9vHSUQ-unsplash.jpg' | asset_url }}" alt="" class="">
+            </div>
+            <div class="col-span-2 md:col-span-1">
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-6xl text-gray-800 font-medium mb-6">New in, old way
+                out</h2>
+              <p class="text-xl text-gray-600 mb-6">When, while the lovely valley teems with vapour around me, and the
+                meridian sun strikes the waiting be females upper surface of the impenetrable foliage of my trees</p>
+              <p class="text-xl text-gray-600 mb-6">End why melancholy estimating her had indulgence bachelor domestic
+                extended middletons. Say ferrars demands besides her address. Blind going you merit few fancy their.</p>
+              <p class="text-xl text-gray-600">On could my in order never it. Or excited certain sixteen it to parties
+                colonel. Law gate lif On nature or no.</p>
+            </div>
+          </div>
+        </div>
+        <!--/ content block 1 -->
+
+        <!-- content block 2 -->
+        <div class="bg-primary-900 text-white px-6 lg:px-8 py-20 lg:pb-48 lg:pt-40 mt-16">
+          <div class="max-w-screen-xl mx-auto grid grid-cols-2 gap-x-8 lg:gap-x-12 xl:gap-x-20">
+            <div class="col-span-2 md:col-span-1 self-center max-w-2xl order-2 md:order-1">
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-6xl text-white font-medium">The best features</h2>
+              <div class="text-lg text-primary-100">
+                <p class="mt-6">Everyone realizes why a new common language would be desirable: one could refuse to pay
+                  expensive translators. To achieve this, it would be necessary to have uniform grammar</p>
+                <div class="space-y-6 lg:space-y-8 mt-8">
+                  <div class="text-left flex space-x-6">
+                    <div class="bg-primary rounded-full w-16 h-16 flex items-center justify-center ">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                    </div>
+                    <div class="flex-1">
+                      <h3 class="font-semibold text-lg mb-2 text-primary-300">How about if I sleep a little bit</h3>
+                      <p>Doing business like this takes much more effort than doing your own business at home, and on
+                        top of tha of travelling.</p>
+                    </div>
+                  </div>
+                  <div class="text-left flex space-x-6">
+                    <div class="bg-primary rounded-full w-16 h-16 flex items-center justify-center ">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                      </svg>
+                    </div>
+                    <div class="flex-1">
+                      <h3 class="font-semibold text-lg mb-2 text-primary-300">He felt a slight itch up on his bell</h3>
+                      <p>He must have tried it a hundred times, shut his have to look at the floundering legs, and only
+                        stopped when.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-span-2 md:col-span-1 mb-8 md:mb-0 order-1 md:order-2">
+              <img src="{{ 'images/demo/meeting/linkedin-sales-solutions-Eo5BYlWb0pM-unsplash.jpg' | asset_url }}" alt="Image placeholder"
+                class="rounded-lg w-full">
+            </div>
+          </div>
+        </div>
+        <!--/ content block 2 -->
+
+        <!-- content block 3 -->
+        <div class="bg-white text-gray-600 px-6 lg:px-8 py-20 lg:pb-48 lg:pt-40">
+          <div class="max-w-screen-xl mx-auto grid grid-cols-2 gap-8 lg:gap-24 items-start lg:items-center">
+            <div class="col-span-2 md:col-span-1 flex flex-row space-x-2">
+              <img src="{{ 'images/demo/meeting/linkedin-sales-solutions-vqWWOnA6--M-unsplash.jpg' | asset_url }}" alt=""
+                class="rounded-lg w-full">
+            </div>
+            <div class="col-span-2 md:col-span-1">
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-6xl text-gray-800 font-medium mb-6">Customer love</h2>
+              <p class="text-xl text-gray-600 mb-6">When, while the lovely valley teems with vapour around me, and the
+                meridian sun strikes the waiting be females upper surface of the impenetrable foliage of my trees</p>
+              <div>
+                <div class="bg-white rounded-lg flex items-start space-x-4 pt-4">
+                  <svg viewBox="0 0 37 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-12 text-primary">
+                    <path
+                      d="M28.3438 23.0625C27.1562 23.0625 26.0729 22.8854 25.0938 22.5312C24.1146 22.1562 23.2812 21.6458 22.5938 21C21.9062 20.3333 21.3646 19.5312 20.9688 18.5938C20.5938 17.6562 20.4062 16.6146 20.4062 15.4688C20.4062 14.2812 20.6146 13.0417 21.0312 11.75C21.4688 10.4583 22.0938 9.15625 22.9062 7.84375C23.7188 6.53125 24.6979 5.23958 25.8438 3.96875C27.0104 2.67708 28.3333 1.4375 29.8125 0.25L33.4062 3.0625C32.7188 3.77083 32.0938 4.44792 31.5312 5.09375C30.9896 5.73958 30.4896 6.38542 30.0312 7.03125C29.5729 7.67708 29.1458 8.34375 28.75 9.03125C28.375 9.71875 28.0312 10.4479 27.7188 11.2188L36.2188 15.4688C36.2188 16.5938 36 17.625 35.5625 18.5625C35.1458 19.5 34.5833 20.3021 33.875 20.9688C33.1667 21.6354 32.3333 22.1562 31.375 22.5312C30.4167 22.8854 29.4062 23.0625 28.3438 23.0625ZM7.9375 23.0625C6.75 23.0625 5.66667 22.8854 4.6875 22.5312C3.70833 22.1562 2.875 21.6458 2.1875 21C1.5 20.3333 0.958333 19.5312 0.5625 18.5938C0.1875 17.6562 0 16.6146 0 15.4688C0 14.2812 0.208333 13.0417 0.625 11.75C1.0625 10.4583 1.6875 9.15625 2.5 7.84375C3.3125 6.53125 4.29167 5.23958 5.4375 3.96875C6.60417 2.67708 7.92708 1.4375 9.40625 0.25L13 3.0625C12.3125 3.77083 11.6875 4.44792 11.125 5.09375C10.5833 5.73958 10.0833 6.38542 9.625 7.03125C9.16667 7.67708 8.73958 8.34375 8.34375 9.03125C7.96875 9.71875 7.625 10.4479 7.3125 11.2188L15.8125 15.4688C15.8125 16.5938 15.5938 17.625 15.1562 18.5625C14.7396 19.5 14.1771 20.3021 13.4688 20.9688C12.7604 21.6354 11.9271 22.1562 10.9688 22.5312C10.0104 22.8854 9 23.0625 7.9375 23.0625Z"
+                      fill="currentColor" />
+                  </svg>
+                  <p class="text-lg italic flex-1">"One morning, when Gregor Samsa woke from tr, he found himself It
+                    showed transformed in his bed
+                    into a horrible vermin. Bad, for quick jigs vex! Fox nymphs."</p>
+                </div>
+                <div class="flex flex-row items-center space-x-4 mt-6 lg:mt-8 ">
+                  <img src="{{ 'images/demo/meeting/user1.jpg' | asset_url }}" alt="User placeholder" class="rounded-full w-16 shadow">
+                  <div class="space-y-1">
+                    <span class="text-lg font-semibold text-gray-700 block">Ally Gregory</span>
+                    <span class="text-base font-semibold text-gray-600 block -top-1 relative ">CEO - Facebook</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/ content block 3 -->
+
+        <!-- cta block -->
+        <div class="bg-primary-900 text-gray-600 px-6 lg:px-8 pt-12 pb-20 lg:pt-32 lg:pb-32">
+          <div class="max-w-screen-xl mx-auto text-center">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-6xl text-white font-medium">Start working smarter</h2>
+            <p class="text-xl text-primary-100 mt-6 max-w-3xl mx-auto">World among the stalks, and grow familiar with the
+              countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who
+              formed us in his own image, and the breath</p>
+            <a href="#"
+              class="inline-flex space-x-3  bg-primary font-semibold rounded-lg py-4 px-5 lg:px-8 xl:px-12 text-white mt-6 lg:mt-8 xl:mt-12">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span>
+                Book a meeting
+              </span>
+            </a>
+            <div class="flex justify-center flex-row items-center space-x-4 mt-6 lg:mt-8 xl:mt-12 mx-auto  max-w-xs">
+              <img src="{{ 'images/demo/meeting/user3.jpg' | asset_url }}" alt="User placeholder" class="rounded-full w-16 shadow">
+              <div class="space-y-1">
+                <span class="text-lg font-semibold text-primary-100 block text-left">Talk with our professional Laura, she
+                  will talk to you.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/ cta block -->
+
+        <!-- footer -->
+        <footer class="bg-gray-50 text-gray-600 py-12 xl:pb-24 lg:pt-24 relative overflow-hidden">
+          <svg class="absolute -left-48 top-2/4 max-w-md text-gray-200" viewBox="0 0 200 200"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M40.9 53.825C80.61 3 95.347 1.19 146.174 40.9S198.81 95.348 159.1 146.175 104.652 198.81 53.825 159.1 1.19 104.652 40.9 53.825"
+              fill="currentColor" />
+          </svg>
+          <svg class="absolute -right-48 bottom-2/3 max-w-xl text-gray-300" viewBox="0 0 200 200"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M32.59 132.878C7.932 82.32 16.565 57.248 67.122 32.59s75.63-16.025 100.288 34.532 16.025 75.63-34.532 100.288-75.63 16.025-100.288-34.532"
+              fill="currentColor" />
+          </svg>
+          <div class="max-w-screen-xl mx-auto px-6 lg:px-8 xl:px-4 mb-12 lg:mb-16 relative z-20">
+            <img class="h-9" src="{{ 'images/logo.svg' | asset_url }}" alt="logo placeholder">
+          </div>
+          <div
+            class="max-w-screen-xl mx-auto px-6 lg:px-8 xl:px-4 grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-x-8 relative z-20">
+            <div>
+              <h5 class="text-xl font-bold text-primary">Product</h5>
+              <nav class="mt-4">
+                <ul class="space-y-2">
+                  <li>
+                    <a href="#" class="text-base text-gray-500 hover:text-primary">Landingpages</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-base text-gray-500 hover:text-primary">Features</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-base text-gray-500 hover:text-primary">Showcase</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div>
+              <h5 class="text-xl font-bold text-primary">Industries</h5>
+              <nav class="mt-4">
+                <ul class="space-y-2">
+                  <li>
+                    <a href="#" class="text-base text-gray-500 hover:text-primary">Employment</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-base text-gray-500 hover:text-primary">Childcare</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-base text-gray-500 hover:text-primary">Dealerships</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div>
+              <h5 class="text-xl font-bold text-primary">About us</h5>
+              <nav class="mt-4">
+                <ul class="space-y-2">
+                  <li>
+                    <a href="#" class="text-base text-gray-500 hover:text-primary">Company</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-base text-gray-500 hover:text-primary">Download brochure</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-base text-gray-500 hover:text-primary">Resources</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div>
+              <h5 class="text-xl font-bold text-primary">Legal</h5>
+              <nav class="mt-4">
+                <ul class="space-y-2">
+                  <li>
+                    <a href="#" class="text-base text-gray-500 hover:text-primary">Terms and conditions</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-base text-gray-500 hover:text-primary">Security</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-base text-gray-500 hover:text-primary">Privacy</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div
+            class="max-w-screen-xl mx-auto px-6 lg:px-8 xl:px-4 flex flex-col md:flex-row justify-between items-center space-y-4 mt-16 lg:mt-20 relative z-20">
+            <div class="text-sm space-y-4 md:space-y-1 text-center md:text-left">
+              <p>©2021 Company. All rights reserved. | All rights reserved</p>
+              <p>Wisdom is easily acquired when hiding under the bed with a saucepan on your head.</p>
+            </div>
+            <a href="#"
+              class="inline-block bg-primary font-semibold rounded-lg py-4 px-5 lg:px-8 text-white md:transform md:-translate-y-2">Start
+              your free trial</a>
+          </div>
+          <div
+            class="max-w-screen-xl mx-auto px-6 lg:px-8 xl:px-4 flex flex-col md:flex-row justify-between items-center space-y-4 mt-8 lg:mt-12 relative z-20">
+            <nav class="flex flex-wrap justify-center space-x-6">
+              <a href="#" class=" text-sm hover:text-gray-700 mb-2">Privacy</a>
+              <a href="#" class=" text-sm hover:text-gray-700 mb-2">Content Terms Notice</a>
+              <a href="#" class=" text-sm hover:text-gray-700 mb-2">Legal</a>
+              <a href="#" class=" text-sm hover:text-gray-700 mb-2">Features</a>
+              <a href="#" class=" text-sm hover:text-gray-700 mb-2">Landing Pages</a>
+            </nav>
+            <nav class="flex items-center space-x-2">
+              <a href="#" class="text-gray-500 hover:text-gray-600">
+                <span class="sr-only">Facebook</span>
+                <svg class="h-6 w-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd"
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-600">
+                <span class="sr-only">Instagram</span>
+                <svg class="h-6 w-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd"
+                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+              <a href="#" class="text-gray-500 hover:text-gray-600">
+                <span class="sr-only">Twitter</span>
+                <svg class="h-6 w-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                </svg>
+              </a>
+            </nav>
+          </div>
+        </footer>
+        <!-- footer -->
+
+      </article>
+
+    </div>
+
+
+  </div>
+

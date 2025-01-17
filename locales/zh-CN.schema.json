@@ -1,0 +1,69 @@
+{
+  "settings_schema": {
+    "generic": {
+      "name": "主题默认设置",
+      "settings": {
+        "logo_url": {
+          "label": "Logo图标",
+          "info": "建议 3:1 尺寸的PNG/SVG格式图片"
+        },
+        "slogan": {
+          "label": "一句话描述"
+        },
+        "copyright_info": {
+          "label": "版权备案信息",
+          "placeholder": "蜀ICP备15035023号"
+        },
+        "is_allow_feedback":{
+          "label": "是否展示用户反馈"
+        },
+        "is_allow_header":{
+          "label": "是否展示页头Header部分"
+        },
+        "is_allow_footer":{
+          "label": "是否展示页脚Footer部分"
+        }
+      }
+    },
+    "nav": {
+      "nav_title": "导航菜单",
+      "head_title": "Head配置",
+      "settings": {
+        "header_menu_html": {
+          "label": "Header页头导航菜单",
+          "info": "支持HTML标签和TailwindCss样式代码"
+        },
+        "footer_menu_html": {
+          "label": "Footer页尾导航菜单",
+          "info": "支持HTML标签和TailwindCss样式代码"
+        },
+        "head_html": {
+          "label": "Head HTML代码",
+          "info": "这部分内容会植入到站点的<head>标签内，请使用标准的 HTML 格式",
+          "placeholder": "如引用外部 css/js 文件，添加 meta 标签等，如 <meta name='baidu_verification' content='CdOTMO2h2' />"
+        }
+      }
+    },
+    "page": {
+      "name": "文章页面",
+      "settings": {
+        "title":{
+          "label": "标题",
+          "info": "显示在正文上方的文章标题"
+        },
+        "description":{
+          "label": "摘要"
+        },
+        "tags":{
+          "label": "标签"
+        },
+        "thumb_image_url":{
+          "label": "封面图"
+        },
+        "content":{
+          "label": "页面内容"
+        }
+      }
+    }
+  }
+}
